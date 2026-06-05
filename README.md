@@ -1,41 +1,91 @@
 # RAG
 
+## How to Install Virtual Environment Using UV
 
-## How to install virtual env using UV
+### 1. Install UV
 
->> pip install uv
+```bash
+pip install uv
+```
 
-Requirement already satisfied: uv in /Users/apple/miniforge3/lib/python3.12/site-packages (0.10.2)
+### 2. Initialize Project
 
->> uv init
+```bash
+uv init
+```
 
-Initialized project `rag`
+Output:
 
->> uv venv .venv
+```text
+Initialized project rag
+```
 
+### 3. Create Virtual Environment
+
+```bash
+uv venv .venv
+```
+
+Output:
+
+```text
 Using CPython 3.12.12 interpreter at: /Users/apple/miniforge3/bin/python3
 
 Creating virtual environment at: .venv
 
-Activate with: source .venv/bin/activate
+Activate with:
+source .venv/bin/activate
+```
 
->> source .venv/bin/activate
+### 4. Activate Virtual Environment
 
-(.venv) (base) 
+```bash
+source .venv/bin/activate
+```
 
+Output:
 
-## For installing packages using uv ->
+```text
+(.venv) (base)
+```
 
-(.venv) (base) >> uv add dotenv
+---
 
+## Installing Packages Using UV
+
+### Install dotenv
+
+```bash
+uv add dotenv
+```
+
+Output:
+
+```text
 Resolved 3 packages in 151ms
-
 Prepared 2 packages in 39ms
-
 Installed 2 packages in 4ms
 
- + dotenv==0.9.9
- + python-dotenv==1.2.2
+dotenv==0.9.9
+python-dotenv==1.2.2
+```
 
+### Install LangChain Dependencies
 
->> uv add langchain_groq langchain_community langchain_core langchain-huggingface langchain_google_genai faiss-cpu pypdf
+```bash
+uv add langchain_groq \
+       langchain_community \
+       langchain_core \
+       langchain-huggingface \
+       langchain_google_genai \
+       faiss-cpu \
+       pypdf
+```
+
+---
+
+## Run the Application
+
+```bash
+python app.py
+```
