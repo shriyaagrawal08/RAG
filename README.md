@@ -14,12 +14,6 @@ pip install uv
 uv init
 ```
 
-Output:
-
-```text
-Initialized project rag
-```
-
 ### 3. Create Virtual Environment
 
 ```bash
@@ -83,9 +77,3 @@ uv add langchain_groq \
 ```
 
 ---
-
-## Run the Application
-
-```bash
-python app.py
-```
